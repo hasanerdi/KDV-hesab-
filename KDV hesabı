@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+
+   public class KDV {
+
+       public static void main(String[] args) {
+
+           //degiskenler: kullanıcıdan alınan paralar
+
+           int KDVsiz ;
+           Scanner girilenler = new Scanner(System.in) ;
+           System.out.print(" KDVsiz:");
+           KDVsiz = girilenler.nextInt();
+
+
+           boolean kosul = ( KDVsiz < 1000);
+           double  KDV = kosul ?  KDVsiz*18/100 : KDVsiz*8/100 ;
+           System.out.println("KDV oranı = " + KDV);
+
+
+           double sonolarak = (KDV+KDVsiz);
+           System.out.println("yani ödemeniz gereken tutar = "  +sonolarak);
